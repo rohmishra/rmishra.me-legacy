@@ -1,10 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* navigation */
+nav {
+    float: right;
+    width: 100vw;
+    background: #dedede;
+    z-index: 999;
+    position: absolute;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    margin: 14px;
+} 
+nav ul>li {
+    display: inline;
+}
+nav ul>li>a{
+    text-decoration: none;
+    color: #222;
+    margin: 0px 4px;
+}
+nav ul>li>a:first-child{
+    margin-left: 14px;
+}
 
 /* main-header */
+.container#hero{
+    display: flex;
+    min-height: 80vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    align-items: flex-end;
+    margin: 0;
+    padding-bottom: 6rem;
+    background: #dedede;
+    /* position: absolute; */
+}
 .container>h1 {
     font-family: 'Yeseva One', cursive;
+    font-size: 6rem;
+    margin-left: 8vw;
 } 
+
+/* Contact Section */
+#contactme.container{
+    min-height: 40vh;
+    padding: 24px;
+}
+#contactme.container h2 {
+    font-size: 4em;
+    font-family: 'Yeseva One', cursive;
+
+}
 
 /* footer */
