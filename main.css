@@ -115,7 +115,7 @@ footer {
 
 @media(max-width:650px) {
     .container {
-        max-height: 80vh;
+        max-height: 90vh;
         /* Make Container height smaller than screen size indicating scroll */
     }
 
