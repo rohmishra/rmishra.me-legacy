@@ -89,6 +89,7 @@ nav>ul>li>a {
 
 .container#hero>.bubbles>img {
     position: absolute;
+    left: -180px;
 }
 
 /* Contact Section */
