@@ -113,7 +113,7 @@ footer {
 
 /* Responsive Design */
 
-@media(max-width:650px) {
+@media(max-width:670px) {
     .container {
         max-height: 90vh;
         /* Make Container height smaller than screen size indicating scroll */
@@ -123,9 +123,13 @@ footer {
     nav {
         flex-direction: column;
         min-height: 20px;
-        padding-top: 24px;
+        padding: 14px 0 8px 0;
         min-width: 100vw;
         ;
+    }
+
+    nav>.logo {
+        display: none;
     }
 
     /* Disable Bubbles on small screen and centre text */
