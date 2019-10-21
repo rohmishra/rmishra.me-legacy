@@ -14,11 +14,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    scroll-snap-type: y proximity;
-    /* overflow-y: scroll; */
-}
-
 a {
     text-decoration: none;
     color: #ff605a;
@@ -28,7 +23,6 @@ a:hover,
 a:focus {
     border-bottom: 4px;
     border-bottom-color: #ff605a;
-    /* color: #ff605a; */
 }
 
 h2 {
@@ -114,8 +108,6 @@ nav.heroSpecial a {
     padding: 0px 48px;
     overflow: hidden;
     padding: 0 10vw;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
     background: #ff605a;
 }
 
@@ -223,6 +215,22 @@ form button {
     animation-direction: alternate
 }
 
+.container#medium-CTA {
+    max-height: 80px;
+    min-height: 80px;
+    height: 80px;
+    background: gainsboro;
+    justify-content: center;
+}
+
+.container#medium-CTA>p {
+    color: #222;
+}
+
+.container#medium-CTA>p>a {
+    color: #000;
+}
+
 /* Who am I */
 .container#intro {
     background: #ab6fc7;
@@ -230,22 +238,27 @@ form button {
 
 .container#projects {
     background: gainsboro;
+    padding: 20px 10px;
+    justify-content: space-evenly;
 }
 
 .container#projects .card {
     background: linear-gradient(135.57deg, #DC2430 -7.72%, rgba(220, 36, 48, 0.72) 113.62%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    min-width: 250px;
-    min-height: 250px;
-    transition: transform 250ms ease-out;
-    padding: 20px;
+    width: 300px;
+    height: 250px;
+    transition: all 300ms ease-in-out;
+    padding: 45px;
+    color: white;
+    font-size: 2rem;
 }
 
 #projects .card:focus,
 #projects .card:focus-within,
 #projects .card:hover {
     transform: scale(1.1);
+    background: #dc2430
 }
 
 /* Contact Section */
@@ -328,12 +341,28 @@ footer a:hover {
         display: none;
     }
 
-    .card {
+    .card,
+    .container#projects .card {
         border-radius: 0;
         max-width: 100vw;
         width: 90vw;
         padding: 18px 48px;
         height: inherit;
+        box-shadow: none;
+    }
+
+    .container#projects {
+        min-height: inherit;
+        padding: 0px 50px;
+    }
+
+    .container#projects .card {
+        padding: 20px 20px;
+        width: 100vw;
+    }
+
+    .container#projects .card:hover {
+        transform: scale(1);
     }
 
     /* footer */
