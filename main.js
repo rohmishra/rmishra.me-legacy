@@ -7,13 +7,18 @@ const options = {
 };
 const heroSpecialObs = new IntersectionObserver(
   (entries) => {
-    entries.forEach(() => toggleUI()); // run toggle when intersecting changes.
+    entries.forEach((entry) => toggleUI(entry.isIntersecting)); // run toggle when intersecting changes.
   },
   options
 );
 
 heroSpecialObs.observe(heroSection); //Ask the heroSection observer to observe hero section
 
-const toggleUI = () => {
-  navBar.classList.toggle("heroSpecial");
+const toggleUI = (isHeroSection) => {
+  // navBar.classList.toggle("heroSpecial");
+  if (isHeroSection) {
+    navBar.classList.add("heroSpecial");
+  } else {
+    navBar.classList.remove("heroSpecial");
+  }
 };

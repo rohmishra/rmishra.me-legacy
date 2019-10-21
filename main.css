@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Manjari|Yeseva+One&display=swap');
 
+/* Misc init stuff */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,15 @@
 
 :root {
     --gradient: linear-gradient(45deg, #7B4397 0%, #DC2430 100%)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
 }
 
 /* navigation */
@@ -24,7 +34,7 @@ nav {
     min-height: 60px;
     padding: 8px 24px 8px 24px;
     filter: grayscale(10%);
-    transition: background 250ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 
@@ -68,6 +78,7 @@ nav.heroSpecial a {
     padding: 0px 48px;
     overflow: hidden;
     padding: 0 10vw;
+    scroll-snap-align: start;
 }
 
 .container>h1 {
@@ -107,11 +118,12 @@ nav.heroSpecial a {
 }
 
 /* Contact Section */
-#contactme.container {
+.container#contactme {
     min-height: 40vh;
+    background: #4c1768;
 }
 
-#contactme.container h2 {
+.container#contactme h2 {
     font-size: 4em;
     font-family: 'Yeseva One', cursive;
 
