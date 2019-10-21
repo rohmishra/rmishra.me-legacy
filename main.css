@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    scroll-snap-type: both proximity;
-    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    /* overflow-y: scroll; */
 }
 
 a {
@@ -115,6 +115,7 @@ nav.heroSpecial a {
     overflow: hidden;
     padding: 0 10vw;
     scroll-snap-align: start;
+    scroll-snap-stop: normal;
     background: #ff605a;
 }
 
@@ -220,6 +221,11 @@ form button {
 .container#hero>.bubbles>img {
     position: absolute;
     /* left: -180px; */
+}
+
+/* Who am I */
+.container#intro {
+    background: #ab6fc7;
 }
 
 /* Contact Section */
