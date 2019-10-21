@@ -23,7 +23,10 @@ nav {
     align-items: center;
     min-height: 60px;
     padding: 8px 24px 8px 24px;
+    filter: grayscale(10%);
+    transition: background 250ms ease-in-out;
 }
+
 
 nav>ul {
     display: flex;
@@ -42,11 +45,21 @@ nav>ul>li>a {
         sans-serif;
 }
 
+/* HeroSpecial Nav */
+nav.heroSpecial {
+    background: none;
+    box-shadow: none;
+}
+
+nav.heroSpecial a {
+    color: #eee;
+}
+
 /* Container Rules */
 .container {
     display: flex;
     height: 100vh;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-bottom: 6rem;
     align-items: center;
     font-family: 'Yeseva One',
@@ -71,7 +84,7 @@ nav>ul>li>a {
     padding-bottom: 6rem;
     background-size: 200%;
     background-image: var(--gradient);
-    animation: bgAnim 20s infinite;
+    animation: bgAnim 16s infinite;
 }
 
 .container#hero>h1 {
@@ -85,11 +98,12 @@ nav>ul>li>a {
 .container#hero>.bubbles {
     position: relative;
     height: 40vh;
+    min-width: 300px
 }
 
 .container#hero>.bubbles>img {
     position: absolute;
-    left: -180px;
+    /* left: -180px; */
 }
 
 /* Contact Section */
