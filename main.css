@@ -37,6 +37,17 @@ nav {
     transition: all 300ms ease-in-out;
 }
 
+a {
+    text-decoration: none;
+    color: #ff605a;
+}
+
+a:hover,
+a:focus {
+    border-bottom: 4px;
+    border-bottom-color: #ff605a;
+    /* color: #ff605a; */
+}
 
 nav>ul {
     display: flex;
@@ -79,6 +90,7 @@ nav.heroSpecial a {
     overflow: hidden;
     padding: 0 10vw;
     scroll-snap-align: start;
+    background: #ff605a;
 }
 
 .container>h1 {
@@ -123,10 +135,10 @@ nav.heroSpecial a {
     background: #4c1768;
 }
 
-.container#contactme h2 {
-    font-size: 4em;
-    font-family: 'Yeseva One', cursive;
-
+h2 {
+    font-size: 2em;
+    font-family: 'Yeseva One', sans-serif;
+    color: #eee;
 }
 
 /* footer */
@@ -134,7 +146,22 @@ nav.heroSpecial a {
 footer {
     background: #222;
     height: 40vh;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
 
+}
+
+footer p,
+footer a {
+    color: #bbb;
+    border-bottom: 0px;
+}
+
+footer a:focus,
+footer a:hover {
+    color: #fff;
+    border-bottom: 4px;
 }
 
 /* Responsive Design */
@@ -163,8 +190,15 @@ footer {
         display: none;
     }
 
-}
+    /* footer */
+    footer {
+        flex-direction: column;
+        ;
+    }
 
+
+
+}
 
 /* Animations */
 @keyframes bgAnim {
