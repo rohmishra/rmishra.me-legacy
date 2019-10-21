@@ -28,6 +28,23 @@ a:focus {
 h2 {
     font-size: 2em;
     color: #eee;
+    line-height: 24px;
+}
+
+h1,
+h4 {
+    font-family: 'Yeseva One', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 83px;
+    color: rgba(200, 200, 200, 0.8);
+}
+
+h4 {
+    font-size: 1.5rem;
+    padding: 12px 0;
+    line-height: initial;
 }
 
 /* navigation */
@@ -111,21 +128,6 @@ nav.heroSpecial a {
     background: #ff605a;
 }
 
-h1,
-h4 {
-    font-family: 'Yeseva One', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 72px;
-    line-height: 83px;
-    color: rgba(200, 200, 200, 0.8);
-}
-
-h4 {
-    font-size: 1.5rem;
-    padding: 12px 0;
-    line-height: initial;
-}
 
 .card {
     background: #ddd;
@@ -233,7 +235,47 @@ form button {
 
 /* Who am I */
 .container#intro {
-    background: #ab6fc7;
+    background: #7a4296;
+    justify-content: space-between;
+}
+
+#intro p {
+    color: #eee;
+    line-height: 24px;
+    font-family: "Manjari", sans-serif;
+    padding: 24px 0;
+    font-size: 1.2rem;
+}
+
+#intro p>a {
+    color: #ccc;
+    border-bottom: #ccc 2px solid;
+    transition: all 300ms ease-out;
+}
+
+#intro a:hover,
+#intro a:focus {
+    color: #fff;
+    border-bottom: #fff 2px solid;
+    background: rgba(200, 200, 200, 0.4);
+}
+
+.intro_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img#avatar {
+    clip-path: circle(40%);
+    max-height: 400px;
+    max-width: 400px;
+    margin: 20px 80px 0 80px;
+}
+
+.img-wrap {
+    filter: drop-shadow(2px 2px 4px rgba(20, 20, 20, 0.2));
 }
 
 .container#projects {
