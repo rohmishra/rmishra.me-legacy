@@ -1,58 +1,100 @@
-@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manjari|Yeseva+One&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --gradient: linear-gradient(45deg, #7B4397 0%, #DC2430 100%)
+}
+
 /* navigation */
 nav {
-    float: right;
-    width: 100vw;
-    background: #dedede;
+    display: flex;
+    /* width: 37vw; */
+    width: 97%;
+    background: rgba(250, 250, 250, 0.5);
     z-index: 999;
     position: absolute;
+    justify-content: space-between;
+    position: fixed;
+    box-shadow: 0px 1px 10px rgba(20, 20, 20, 0.5);
+    align-items: center;
+    min-height: 60px;
+    padding: 8px 24px 8px 24px;
 }
-nav ul{
+
+nav>ul {
     display: flex;
     flex-direction: row;
-    margin: 14px;
-} 
-nav ul>li {
+}
+
+nav>ul>li {
     display: inline;
 }
-nav ul>li>a{
+
+nav>ul>li>a {
     text-decoration: none;
     color: #222;
     margin: 0px 4px;
+    font-family: 'Manjari',
+        sans-serif;
 }
-nav ul>li>a:first-child{
-    margin-left: 14px;
+
+/* Container Rules */
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    padding-bottom: 6rem;
+    align-items: center;
+    font-family: 'Yeseva One',
+        sans-serif;
+    font-size: 1rem;
+    padding: 0px 48px;
+    overflow: hidden;
+    padding: 0 10vw;
+}
+
+.container>h1 {
+    font-family: 'Yeseva One', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 83px;
+    color: #000;
 }
 
 /* main-header */
-.container#hero{
-    display: flex;
-    min-height: 80vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    align-items: flex-end;
-    margin: 0;
+.container#hero {
     padding-bottom: 6rem;
-    background: #dedede;
-    /* position: absolute; */
+    background-size: 200%;
+    background-image: var(--gradient);
+    animation: bgAnim 30s infinite;
 }
-.container>h1 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 6rem;
-    margin-left: 8vw;
-} 
+
+.container#hero>h1 {
+    color: #EEEEEE;
+    max-width: 400px;
+    opacity: 100%;
+    animation: heroText 0.9s ease-out 0.2s 1;
+}
+
+.container#hero>.bubbles {
+    position: relative;
+    height: 40vh;
+}
+
+.container#hero>.bubbles>img {
+    position: absolute;
+}
 
 /* Contact Section */
-#contactme.container{
+#contactme.container {
     min-height: 40vh;
-    padding: 24px;
 }
+
 #contactme.container h2 {
     font-size: 4em;
     font-family: 'Yeseva One', cursive;
@@ -60,3 +102,59 @@ nav ul>li>a:first-child{
 }
 
 /* footer */
+.container#footer,
+footer {
+    background: #222;
+    height: 40vh;
+
+}
+
+/* Responsive Design */
+
+@media(max-width:650px) {
+    .container {
+        max-height: 80vh;
+        /* Make Container height smaller than screen size indicating scroll */
+    }
+
+    /* Nav Bar */
+    nav {
+        flex-direction: column;
+        min-height: 20px;
+        padding-top: 24px;
+        min-width: 100vw;
+        ;
+    }
+
+    /* Disable Bubbles on small screen and centre text */
+    .container#hero>.bubbles {
+        display: none;
+    }
+
+}
+
+
+/* Animations */
+@keyframes bgAnim {
+    0% {
+        background-position: left
+    }
+
+    50% {
+        background-position: right
+    }
+
+    100% {
+        background-position: left
+    }
+}
+
+@keyframes heroText {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
