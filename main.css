@@ -59,6 +59,7 @@ nav {
 nav>ul {
     display: flex;
     flex-direction: row;
+    list-style: none;
 }
 
 nav>ul>li {
@@ -67,10 +68,25 @@ nav>ul>li {
 
 nav>ul>li>a {
     text-decoration: none;
-    color: #222;
+    text-transform: uppercase;
+    color: #444;
     margin: 0px 4px;
+    outline: none;
     font-family: 'Manjari',
         sans-serif;
+}
+
+nav:hover,
+nav:focus-within {
+
+    background: #fff;
+    /* #dc2430; */
+    /* border-radius: 4px; */
+}
+
+nav a:hover,
+nav a:focus {
+    color: #000;
 }
 
 
