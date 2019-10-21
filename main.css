@@ -77,8 +77,9 @@ nav>ul>li>a {
 .container#hero>h1 {
     color: #EEEEEE;
     max-width: 400px;
-    opacity: 100%;
+    opacity: 0;
     animation: heroText 0.9s ease-out 0.2s 1;
+    animation-fill-mode: forwards;
 }
 
 .container#hero>.bubbles {
