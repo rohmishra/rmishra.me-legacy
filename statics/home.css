@@ -11,9 +11,9 @@ nav.heroSpecial a {
 /* main-header */
 .container#hero {
     padding-bottom: 6rem;
-    background-size: 200%;
+    background-size: 300%;
     background-image: var(--gradient);
-    animation: bgAnim 16s infinite;
+    animation: bgAnim 22s infinite;
 }
 
 .container#hero>h1 {
@@ -132,7 +132,7 @@ img#avatar {
 
 /* Responsive Design */
 
-@media(max-width:670px) {
+@media(max-width:680px) {
 
     .card,
     .container#projects .card {

@@ -90,13 +90,12 @@
             <h2>Hire Me</h2>
             <h4>I design and develop:<br />Website, android & iOS apps, scripts</h4>
         </div>
-        <!-- <div class="right"></div> -->
         <div class="card">
             <h4>Contact me</h4>
-            <form action="https://api.crazydeveloper.fail/webactions/contactMeAction" method="POST">
-                <input type="text" placeholder="Name" id="name" name="Name" aria-label="name">
-                <input type="email" placeholder="email" name="Email" id="email" aria-label="email">
-                <button type="submit">Get in touch!</button>
+            <form action="https://api.crazydeveloper.fail/webactions/contactMeAction" method="POST" id="contactForm">
+                <input type="text" placeholder="Name" id="name" name="Name" aria-label="name" required>
+                <input type="email" placeholder="email" name="Email" id="email" aria-label="email" required>
+                <button type="submit" id="btnGo" onclick="submitForm">Get in touch!</button>
             </form>
             <p>Your Email and Name will be saved for future reference. Your email will NOT be used for adverisement or
                 be shared with third party. Works better with JavaScript Enabled.</p>
