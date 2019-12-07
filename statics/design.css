@@ -8,7 +8,12 @@
 }
 
 .container a {
-    color: #222;
+    color: #111;
+}
+
+.container a:hover {
+    color: #000;
+    border-bottom: #000 4px solid;
 }
 
 @media(max-width:680px) {
