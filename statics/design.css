@@ -77,9 +77,7 @@ h3 {
 }
 
 .heroimg>img {
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-height: 80vh;
+    max-height: 85vh;
 }
 
 .button {
@@ -141,7 +139,8 @@ h3 {
 }
 
 #childishh {
-    background: #AA076B;
+    background: linear-gradient(205deg, #AA076B 0%, #61045F 100%);
+    /* #AA076B; */
 }
 
 #all_projects {
@@ -156,7 +155,8 @@ h3 {
 #music_ios p,
 #music_bgscr p,
 #concept_ola p,
-#ubank p {
+#ubank p,
+#childishh p {
     color: #eee;
 }
 
@@ -188,6 +188,8 @@ h3 {
     animation-delay: 100ms;
     animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 }
+
+#ubank>.heroimg>img {}
 
 #all_projects p {
     margin-top: 8px;
@@ -229,7 +231,8 @@ h3 {
     }
 
     .heroimg>img {
-        max-height: 60vw;
+        max-height: 90vw;
+        max-width: 85vw;
     }
 
     .button {
