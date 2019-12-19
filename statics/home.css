@@ -146,6 +146,7 @@ img#avatar {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    font-size: 26px;
 
 }
 
