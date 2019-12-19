@@ -135,7 +135,7 @@ img#avatar {
     transition: all 300ms ease-in-out;
     padding: 24px;
     color: #fee;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: "Manjari";
 }
 
@@ -144,6 +144,15 @@ img#avatar {
 #projects .card:hover {
     transform: scale(1.08);
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+#projects .card:hover:after {
+    content: '<a href="github.com/rohmish">View more</a>';
+    position: absolute;
+    right: 10%;
+    color: #eeeeeeee;
+    bottom: 8%;
+    font-size: 1rem;
 }
 
 /* Contact Section */
