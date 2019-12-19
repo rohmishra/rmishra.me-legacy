@@ -101,7 +101,8 @@ img#avatar {
 }
 
 .container#projects {
-    background: gainsboro;
+    background: linear-gradient(to bottom, #d6d2da, #e1cdc5);
+    /* gainsboro; */
     padding: 20px 10px;
     justify-content: space-evenly;
     flex-direction: column;
@@ -124,7 +125,7 @@ img#avatar {
 }
 
 .container#projects .card {
-    background: linear-gradient(135.57deg, #DC2430 -7.72%, rgba(220, 36, 48, 0.72) 113.62%);
+    background: #efefef;
     box-shadow: 0px 4px 8px rgba(0.8, 0.8, 0.8, 0.25);
     border-radius: 10px;
     overflow: hidden;
@@ -139,6 +140,15 @@ img#avatar {
     font-family: "Manjari";
 }
 
+.container#projects .card>h3 {
+    background: linear-gradient(45deg, #bc4e9c, #f80759);
+    /* linear-gradient(135.57deg, #DC2430 -7.72%, rgba(220, 36, 48, 0.72) 113.62%); */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
 #projects .card:focus,
 #projects .card:focus-within,
 #projects .card:hover {
@@ -150,7 +160,7 @@ img#avatar {
     content: 'available on github.';
     position: absolute;
     right: 10%;
-    color: #eeeeeeee;
+    color: #444444ee;
     bottom: 8%;
     font-size: 1rem;
 }
