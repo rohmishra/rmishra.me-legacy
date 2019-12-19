@@ -1,10 +1,35 @@
+html,
+body {
+    scroll-snap-type: both mandatory;
+    scroll-snap-stop: normal;
+    scroll-snap-type: mandatory;
+}
+
+.container,
+footer {
+    scroll-snap-align: start;
+}
+
 .container {
-    background: #888;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8vh 8vw;
+    box-sizing: border-box;
+    max-height: 100vw;
+    padding-top: 8%;
+
 }
 
 .container p {
     color: #333;
-    font-size: 2.8em;
+    font-size: 2.2em;
+    font-family: "Manjari";
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .container a {
@@ -16,9 +41,268 @@
     border-bottom: #000 4px solid;
 }
 
-@media(max-width:680px) {
-    .container {
-        font-size: 0.9em;
-        justify-content: space-evenly;
+h3 {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 74px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 40vw;
+    align-items: baseline;
+}
+
+.content>img {
+    margin: 24px 4px;
+    max-width: 30vh;
+}
+
+.content>h2 {
+    margin: 24px 4px;
+    background: linear-gradient(to right, #fffc00, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.heroimg {
+    position: relative;
+}
+
+.heroimg>img {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-height: 80vh;
+}
+
+.button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 4px solid #555;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+    padding: 8px 22px;
+    text-decoration: none;
+    margin: 12px 0px;
+    min-width: 200px;
+    transition: background-color 300ms ease-out;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #ffffff77;
+    border-bottom-color: #555;
+}
+
+
+/* SPECIFIC CONTAINER DESIGN */
+
+#heroSpecial {
+    background: linear-gradient(241.25deg, rgba(255, 255, 255, 0.71) 0%, rgba(221, 25, 25, 0.93) 0.01%, rgba(11, 7, 211, 0.63) 100%);
+    justify-content: center;
+}
+
+
+#magicall {
+    background: #BFD646;
+}
+
+#music_android {
+    background: #213D4A;
+}
+
+#music_ios {
+    background: #143D9D;
+}
+
+#music_bgscr {
+    background: #F20099;
+}
+
+#concept_ola {
+    background: #D54343;
+}
+
+#speto {
+    background: #F9546E;
+}
+
+#ubank {
+    background: #FF3E3F;
+}
+
+#childishh {
+    background: #AA076B;
+}
+
+#all_projects {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Content Designs */
+
+/* Set white text for elements with dark background */
+#music_android p,
+#music_ios p,
+#music_bgscr p,
+#concept_ola p,
+#ubank p {
+    color: #eee;
+}
+
+#heroSpecial>h1 {
+    opacity: 0%;
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    /* linear-gradient(to right, #12c2e9, #c471ed, #f64f59); */
+    background-clip: text;
+    animation: logoAnim 0.8s forwards 300ms ease-out;
+    text-align: center;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1.75;
+}
+
+#heroSpecial:after {
+    content: '';
+    position: absolute;
+    left: 49%;
+    bottom: 4%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #e8e8e899;
+    animation-name: bounceArrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 100ms;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+#all_projects p {
+    margin-top: 8px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+#all_projects .button {
+    margin: 4px 12px;
+}
+
+#all_projects .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width:700px) {
+
+    .container,
+    .container:nth-child(even) {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .content>img {
+        max-width: 30vw;
+    }
+
+    .content>p {
+        font-size: 24px;
+        text-align: center;
+        min-width: 80vw;
+        margin: 12px 0px;
+    }
+
+    .heroimg>img {
+        max-height: 60vw;
+    }
+
+    .button {
+        text-align: center;
+        margin: 8px 12px;
+        font-size: 1em;
+        border-width: 2.5px;
+        padding: 8px 4px;
+    }
+
+    #heroSpecial:after {
+        left: 47%;
+    }
+
+    #all_projects h3 {
+        font-size: 42px;
+    }
+
+    #all_projects p {
+        margin-top: 4px;
+        line-height: 32px;
+        font-size: 36px;
+    }
+
+    #all_projects .buttons {
+        flex-direction: column;
+
+    }
+
+}
+
+@keyframes logoAnim {
+    0% {
+        transform: scale(1.54);
+        opacity: 0.1;
+    }
+
+    80% {
+        transform: scale(0.98);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceArrow {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-80px);
+    }
+
+    50% {
+        transform: scale(1.05, .95) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
     }
 }

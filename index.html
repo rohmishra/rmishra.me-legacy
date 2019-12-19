@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="Description" content="Rohan Mishra is a software developer, designer, a student. He loves EDM too.">
     <meta name="theme-color" content="#7B4397">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -25,14 +25,17 @@
     <meta name="msapplication-TileImage" content="/assets/mstile-144x144.png">
     <meta name="msapplication-config" content="/assets/browserconfig.xml">
     <meta name="theme-color" content="#7b4397">
+    <!-- Scripts -->
+    <script src="/statics/main.js" async></script>
 
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="heroSpecial">
         <img class="logo" alt="Logo" src="/assets/logo.svg" href="#hero" />
         <ul>
+            <li><a aria-label="My Designs" href="/design" class="link">Designs</a></li>
             <li><a aria-label="My Projects" href="#projects" class="link">Projects</a></li>
             <li><a aria-label="Contact Rohan" href="#contactme" class="link">hire ME</a></li>
         </ul>
@@ -68,7 +71,7 @@
         </div>
         <div class="intro_right">
             <span class="img-wrap">
-                <img src="/assets/me.jpg" alt="My Photo" id="avatar">
+                <img src="/assets/me.jpg" alt="My Photo" loading="lazy" id="avatar">
             </span>
             <p>
                 This is me!<br />
@@ -80,9 +83,15 @@
 
     <!-- SECTION: Projects Minimodule -->
     <div id="projects" class="container">
-        <div class="card">Instagram Bot that works for you!</div>
-        <div class="card">A flexible Chat App built using just modern web standards</div>
-        <div class="card">Websites and webapps</div>
+        <h2>My projects</h2>
+        <div class="showcase">
+            <div class="card">Instagram Bot that works for you!</div>
+            <div class="card">A flexible Chat App built using just modern web standards</div>
+            <div class="card">Built from scratch authentication and authorisation platform</div>
+            <div class="card">A management tool for local real estate outfit</div>
+            <div class="card">An asset tracking app for schools</div>
+            <div class="card">Tempy: A CLI + GUI weather app built using python</div>
+        </div>
     </div>
     <!-- SECTION: Contact me -->
     <div id="contactme" class="container">
@@ -131,8 +140,7 @@
         </div>
 
     </footer>
-    <!-- Scripts -->
-    <script src="/statics/main.js"></script>
+
 </body>
 
 </html>
