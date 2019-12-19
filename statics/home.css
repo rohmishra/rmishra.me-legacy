@@ -147,7 +147,7 @@ img#avatar {
 }
 
 #projects .card:hover:after {
-    content: '<a href="github.com/rohmish">View more</a>';
+    content: 'available on github.';
     position: absolute;
     right: 10%;
     color: #eeeeeeee;
