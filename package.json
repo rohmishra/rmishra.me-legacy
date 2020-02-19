@@ -15,7 +15,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm test",
+      "pre-push": "branch-naming-check '^(BUGFIX|FEATURE|LEGAL|DEV)-\\d{1,8}'"
     }
   }
 }
