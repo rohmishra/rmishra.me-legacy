@@ -38,13 +38,6 @@ nav.heroSpecial a {
     animation-direction: alternate
 }
 
-.container#medium-CTA {
-    max-height: 80px;
-    min-height: 80px;
-    height: 80px;
-    background: gainsboro;
-    justify-content: center;
-}
 
 .container#medium-CTA>p {
     color: #222;
@@ -52,6 +45,7 @@ nav.heroSpecial a {
 
 .container#medium-CTA>p>a {
     color: #000;
+    border-bottom: 2px #33333388 solid;
 }
 
 /* Who am I */
@@ -107,6 +101,19 @@ img#avatar {
     justify-content: space-evenly;
     flex-direction: column;
     max-width: 100vw;
+}
+
+#github-CTA {
+    background: #454545;
+}
+
+#github-CTA>p {
+    color: #ddd;
+}
+
+#github-CTA>p>a {
+    color: #fff;
+    border-bottom: 2px #fff solid;
 }
 
 #projects>h2 {

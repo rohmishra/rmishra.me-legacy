@@ -118,12 +118,19 @@ nav a:focus {
     font-family: 'Yeseva One',
         sans-serif;
     font-size: 1rem;
-    padding: 0px 48px;
     overflow: hidden;
     padding: 0 10vw;
     background: #ff605a;
 }
 
+/* Strip Callout rules */
+.strip {
+    max-height: 80px;
+    min-height: 80px;
+    height: 80px;
+    background: gainsboro;
+    justify-content: center;
+}
 
 .card {
     background: #ddd;
