@@ -249,6 +249,10 @@ img#avatar {
         display: none;
         /* DISABLE BUBBLES */
     }
+
+    #contactme {
+        min-height: 85vh;
+    }
 }
 
 /* ================
