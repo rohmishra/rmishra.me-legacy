@@ -38,14 +38,20 @@ nav.heroSpecial a {
     animation-direction: alternate
 }
 
-
-.container#medium-CTA>p {
+/* Medium Strip CTA */
+#medium-CTA>p {
     color: #222;
 }
 
-.container#medium-CTA>p>a {
+#medium-CTA>p>a {
     color: #000;
-    border-bottom: 2px #33333388 solid;
+    border-bottom: 2px #000 solid;
+}
+
+#medium-CTA a:hover,
+#medium-CTA a:focus {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Who am I */
@@ -116,10 +122,17 @@ img#avatar {
     border-bottom: 2px #fff solid;
 }
 
+#github-CTA a:hover,
+#github-CTA a:focus {
+    background-color: #fff;
+    color: #454545;
+}
+
 #projects>h2 {
     color: #222;
     padding: 12px;
 }
+
 
 .showcase {
     display: flex;
@@ -174,10 +187,22 @@ img#avatar {
 }
 
 /* Contact Section */
-.container#contactme {
+#contactme {
     background: #4c1768;
     justify-content: space-evenly;
 
+}
+
+/* Callout Strip for resume */
+#resume-CTA a {
+    color: #4c1768;
+    border-bottom: 2px #4c1768 solid;
+}
+
+#resume-CTA a:hover,
+#resume-CTA a:focus {
+    background-color: #4c1768;
+    color: #fff;
 }
 
 /* Responsive Design */
@@ -223,6 +248,10 @@ img#avatar {
     .container#hero>.bubbles {
         display: none;
         /* DISABLE BUBBLES */
+    }
+
+    #contactme {
+        min-height: 85vh;
     }
 }
 
