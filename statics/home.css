@@ -93,7 +93,7 @@ img#avatar {
     -webkit-clip-path: circle(40%);
     max-height: 400px;
     max-width: 400px;
-    margin: 20px 80px 0 80px;
+    margin-left: 20px;
 }
 
 .img-wrap {
@@ -140,7 +140,6 @@ img#avatar {
     padding: 24px 16px;
     overflow-x: auto;
     max-width: 100vw;
-    height: auto;
     scrollbar-width: none;
 }
 
