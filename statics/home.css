@@ -140,7 +140,6 @@ img#avatar {
     padding: 24px 16px;
     overflow-x: auto;
     max-width: 100vw;
-    height: auto;
     scrollbar-width: none;
 }
 
