@@ -130,8 +130,9 @@ img#avatar {
 #projects>h2 {
     color: #222;
     padding: 8px;
-    font-size: 36px;
+    font-size: 64px;
     font-weight: 900;
+    line-height: unset;
 }
 
 
