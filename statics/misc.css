@@ -3,7 +3,7 @@
 
     This stylesheet is reserved for 400/500 error pages styling.
 
-    0. Navigation Bar..
+    0. Navigation bar and footer fixes.
     1. 404: Not Found.
 */
 
@@ -18,7 +18,6 @@ nav{
 nav:hover{
     background: unset;
 }
-
 
 /* 
  1. Not found 
@@ -44,6 +43,11 @@ nav:hover{
  1.a. Not found for dark mode 
  */
 @media (prefers-color-scheme: dark){
+    footer{
+        background: #212121;
+    }
+    
+ 
     .container.not-found {
         background: #212121;
     }
