@@ -3,10 +3,26 @@
 
     This stylesheet is reserved for 400/500 error pages styling.
 
+    0. Navigation Bar..
     1. 404: Not Found.
 */
 
-/* 1. Not found */
+/* 
+ 0. Navigation Bar
+*/
+nav{
+    background: none;
+    box-shadow: unset;
+    padding-top: 24px;
+}
+nav:hover{
+    background: unset;
+}
+
+
+/* 
+ 1. Not found 
+*/
 .container.not-found {
     background: #dedede;
     /* Default Container is flexing horizontally, make it vertical */
@@ -21,9 +37,12 @@
 
 .not-found>h3{
     padding-bottom: 20%;
+    text-align: center;
 }
 
-/* 1.a. Not found for dark mode */
+/* 
+ 1.a. Not found for dark mode 
+ */
 @media (prefers-color-scheme: dark){
     .container.not-found {
         background: #212121;
