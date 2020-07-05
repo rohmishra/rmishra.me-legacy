@@ -1,7 +1,7 @@
 {
   "name": "website_mini",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "Personal showcase website for Rohan Mishra. (c) 2020 Rohan Mishra.",
   "main": "main.js",
   "scripts": {
     "test": "jest"
