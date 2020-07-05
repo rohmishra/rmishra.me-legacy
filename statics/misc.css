@@ -1,0 +1,39 @@
+/* (C) 2020 Rohan Mishra. 
+    -- I'm looking for work! email: rohan@crazydeveloper.fail
+
+    This stylesheet is reserved for 400/500 error pages styling.
+
+    1. 404: Not Found.
+*/
+
+/* 1. Not found */
+.container.not-found {
+    background: #dedede;
+    /* Default Container is flexing horizontally, make it vertical */
+    flex-direction: column;
+}
+.not-found>h2{
+    color: #444;
+    font-size: 14em;
+    padding-top: 16%;
+    line-height: unset;
+}
+
+.not-found>h3{
+    padding-bottom: 20%;
+}
+
+/* 1.a. Not found for dark mode */
+@media (prefers-color-scheme: dark){
+    .container.not-found {
+        background: #212121;
+    }
+
+    .not-found>h2{
+        color: #dedede;
+    }
+
+    .not-found>h3{
+        color: #bcbcbc;
+    }
+}
