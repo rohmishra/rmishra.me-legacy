@@ -100,15 +100,6 @@ img#avatar {
     filter: drop-shadow(2px 2px 4px rgba(20, 20, 20, 0.2));
 }
 
-.container#projects {
-    background: linear-gradient(to bottom, #d6d2da, #e1cdc5);
-    /* gainsboro; */
-    padding: 20px 10px;
-    justify-content: space-evenly;
-    flex-direction: column;
-    max-width: 100vw;
-}
-
 #github-CTA {
     background: #454545;
 }
@@ -128,9 +119,19 @@ img#avatar {
     color: #454545;
 }
 
+.container#projects {
+    background: linear-gradient(to bottom, #d6d2da, #e1cdc5);
+    padding: 20px 10px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    max-width: 100vw;
+}
+
 #projects>h2 {
     color: #222;
-    padding: 12px;
+    padding: 8px;
+    font-size: 36px;
+    font-weight: 900;
 }
 
 
@@ -166,6 +167,7 @@ img#avatar {
     background-clip: text;
     -webkit-background-clip: text;
     font-size: 26px;
+    font-weight: 900;
 
 }
 
@@ -202,6 +204,24 @@ img#avatar {
 #resume-CTA a:focus {
     background-color: #4c1768;
     color: #fff;
+}
+
+/* Dark Scheme */
+@media (prefers-color-scheme: dark){
+    .container#projects {
+        background: #040404;
+    }
+    .container#projects .card{
+        background:#242024;
+    }
+    #projects .card:hover:after {
+        color: #ddd;
+    }
+    #projects>h2 {
+    background: linear-gradient(45deg, #bc4e9c, #f80759);
+    color: transparent;
+    background-clip: text;
+    }
 }
 
 /* Responsive Design */
