@@ -54,7 +54,7 @@ nav {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    background: rgba(250, 250, 250, 0.5);
+    background: rgba(220, 220, 220, 0.5);
     z-index: 999;
     justify-content: space-between;
     position: fixed;
@@ -63,10 +63,15 @@ nav {
     min-height: 70px;
     max-height: 90px;
     padding: 14px 48px;
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(30px);
-    -moz-backdrop-filter: blur(16px);
     transition: all 300ms ease-in-out;
+}
+
+@supports (-webkit-backdrop-filter: blur(30px) ){
+    nav {
+        background: rgba(255, 255, 255, 0.75);
+    }
 }
 
 
@@ -95,7 +100,7 @@ nav>ul>li>a {
 nav:hover,
 nav:focus-within {
 
-    background: #fff;
+    background: rgba(240, 240, 240, 0.75);
     /* #dc2430; */
     /* border-radius: 4px; */
 }
@@ -265,30 +270,51 @@ footer a:hover {
     justify-content: flex-end;
 }
 
+@media(prefers-color-scheme: light){
+    nav:not(.heroSpecial)>img{
+        transition: all 300ms ease-in;
+        filter: brightness(50%);
+    }
+}
+
 /* Dark Mode */
 
 @media (prefers-color-scheme: dark){
     nav {
-        background: rgba(30, 30, 30, 0.85);
-        
+        background: rgba(40, 40, 40, 0.85);
     }
-    
-    @supports (backdrop-filter: blur(10px)) or (--webkit-backdrop-filter: blur(10px)) {
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
         nav{
 
-            background: rgba(110, 110, 110, 0.45);
+            background: rgba(110, 110, 110, 0.47);
+            box-shadow: 0px 1px 6px rgba(20, 20, 20, 0.5);
         }
     }
-    @supports (-webkit-backdrop-filter: blur(16px)) {
-        nav{
+
+    @supports (--webkit-backdrop-filter: blur(16px)) {
+        nav {
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(36px);
             background: rgba(55, 55, 55, 0.45);
         }
     }
 
+    /*  
+    Firefox supports backdrop filter blur but doesnt enable it. 
+    This results in a broken experience with the navbar.
+    This will force navbar to use different colors on firefox but 
+    will break for everyone who has blur enabled.
+    I will remove this "hack" in future if i find a better way.
+*/
+    @-moz-document url-prefix() {
+        nav {
+            background: rgba(40, 40, 40, 0.75);
+            box-shadow: none;
+            backdrop-filter: none;
+        }
+    }
+
     nav:hover{
-        background: rgb(35, 35, 35,0.85);
+        background: rgb(35, 35, 35,0.8);
     }
     nav>ul>li>a {
         color: #ccc;
