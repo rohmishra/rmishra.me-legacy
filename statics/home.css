@@ -79,8 +79,9 @@ nav.heroSpecial a {
 }
 
 #intro p>a {
-    color: #ccc;
-    border-bottom: #ccc 2px solid;
+    color: #dedede;
+    border-bottom: #dedede 2px solid;
+    font-weight: 600;
     transition: all 300ms ease-out;
 }
 
@@ -88,7 +89,7 @@ nav.heroSpecial a {
 #intro a:focus {
     color: #fff;
     border-bottom: #fff 2px solid;
-    background: rgba(200, 200, 200, 0.4);
+    background: rgba(200, 200, 200, 0.3);
 }
 
 .intro_right {
