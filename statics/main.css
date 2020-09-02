@@ -282,7 +282,6 @@ footer a:hover {
 @media (prefers-color-scheme: dark){
     nav {
         background: rgba(40, 40, 40, 0.85);
-        box-shadow: none;   
     }
     @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
         nav{
@@ -310,6 +309,7 @@ footer a:hover {
         nav {
             background: rgba(40, 40, 40, 0.75);
             box-shadow: none;
+            backdrop-filter: none;
         }
     }
 
