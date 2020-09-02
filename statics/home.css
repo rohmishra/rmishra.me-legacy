@@ -54,10 +54,20 @@ nav.heroSpecial a {
     color: #fff;
 }
 
+@media(prefers-scheme-scheme: dark){
+    #medium-CTA {
+        background-color: #bdbdbd;
+    }
+}
+
 /* Who am I */
 .container#intro {
     background: #7a4296;
     justify-content: space-evenly;
+}
+
+.intro_left{
+    max-width: 60%;
 }
 
 #intro p {
@@ -222,6 +232,7 @@ img#avatar {
     background: linear-gradient(45deg, #bc4e9c, #f80759);
     color: transparent;
     background-clip: text;
+    -moz-background-clip: text;
     }
 }
 
@@ -257,6 +268,10 @@ img#avatar {
 
     .container#intro {
         padding: 42px;
+    }
+
+    .container#intro .intro_left {
+        max-width: 90%;
     }
 
     /* Disable Bubbles on small screen and centre text */
