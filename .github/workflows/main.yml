@@ -33,3 +33,4 @@ jobs:
           home_page_path: "/index.html"
     # Path of the 404 page to be shown
           error_page_path: "/404.html"
+          build_folder: ${{ github.workspace }} 
