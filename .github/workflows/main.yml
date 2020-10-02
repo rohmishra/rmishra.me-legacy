@@ -24,11 +24,11 @@ jobs:
       - uses: abinmn/gcp-storage-bucket-action@v1.0
         with:
     # GCP service key encoded as base64. The account associated with the key should have permissions to make changes in storage bucket.
-          service_key:  ${{Secrets.gcp_servicekey}}
+          service_key:  ${{secrets.gcp_servicekey}}
     # Bucket name
-          bucket_name: ${{Secrets.gcp_bucketname}}
+          bucket_name: ${{secrets.gcp_bucketname}}
     # Name of the project that contains the storage bucket.
-          project: ${{Secrets.gcp_projectpath}}
+          project: ${{secrets.gcp_projectpath}}
     # Path of your homepage in cloud storage bucket.
           home_page_path: "/index.html"
     # Path of the 404 page to be shown
