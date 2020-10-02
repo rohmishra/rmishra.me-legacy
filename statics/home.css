@@ -148,9 +148,9 @@ img#avatar {
 
 
 .showcase {
-    display: flex;
-    flex-direction: row;
-    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 22px 16px;
     overflow-x: auto;
     max-width: 100vw;
     scrollbar-width: none;
@@ -159,17 +159,18 @@ img#avatar {
 .container#projects .card {
     background: #efefef;
     box-shadow: 0px 4px 8px rgba(0.8, 0.8, 0.8, 0.25);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     box-sizing: border-box;
-    margin: 12px;
-    min-width: 300px;
+    margin: 10px;
+    min-width: 260px;
     height: 250px;
     transition: all 300ms ease-in-out;
     padding: 24px;
     color: #fee;
     font-size: 1.6rem;
     font-family: "Manjari";
+    align-content: center;
 }
 
 .container#projects .card>h3 {
@@ -178,8 +179,9 @@ img#avatar {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 900;
+    height: 100%;
 
 }
 
@@ -188,6 +190,7 @@ img#avatar {
 #projects .card:hover {
     transform: scale(1.08);
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    opacity: 0.94;
 }
 
 #projects .card:hover:after {
@@ -195,14 +198,17 @@ img#avatar {
     position: absolute;
     right: 10%;
     color: #444444ee;
-    bottom: 8%;
+    bottom: 0%;
+    opacity: 0;
     font-size: 1rem;
+    animation: card-hover-after-text 250ms ease-out 120ms 1 forwards;
 }
 
 /* Contact Section */
 #contactme {
     background: #4c1768;
     justify-content: space-evenly;
+    position: relative;
 
 }
 
@@ -216,6 +222,62 @@ img#avatar {
 #resume-CTA a:focus {
     background-color: #4c1768;
     color: #fff;
+}
+
+/* Responsive Design */
+
+@media(max-width:680px) {
+
+    .card {
+        border-radius: 0;
+        max-width: 100vw;
+        width: 90vw;
+        padding: 18px 48px;
+        height: inherit;
+        box-shadow: none;
+    }
+
+    .container#projects {
+        min-height: 100vh;
+        padding: 0px 50px;
+    }
+
+    .container#projects .card {
+        min-width: 75vw;
+        max-width: 75vw;
+        border-radius: 2px;
+        font-size: 1.85em;
+        padding: 32px 24px;
+        margin-right: 4px;
+    }
+
+    .container#projects .card:hover,
+    .container#projects .card:focus {
+        transform: scale(1.06);
+    }
+
+    .container#intro {
+        padding: 32px 24px;
+    }
+
+    .container#intro .intro_left {
+        max-width: 95%;
+    }
+
+    /* Disable Bubbles on small screen and centre text */
+    .container#hero {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container#hero>.bubbles {
+        display: none;
+        /* DISABLE BUBBLES */
+    }
+
+    #contactme {
+        min-height: 85vh;
+    }
 }
 
 /* Dark Scheme */
@@ -234,60 +296,6 @@ img#avatar {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    }
-}
-
-/* Responsive Design */
-
-@media(max-width:680px) {
-
-    .card {
-        border-radius: 0;
-        max-width: 100vw;
-        width: 90vw;
-        padding: 18px 48px;
-        height: inherit;
-        box-shadow: none;
-    }
-
-    .container#projects {
-        min-height: 80vh;
-        padding: 0px 50px;
-    }
-
-    .container#projects .card {
-        min-width: 80vw;
-        border-radius: 6px;
-        font-size: 1.75em;
-        padding: 36px 24px;
-    }
-
-    .container#projects .card:hover,
-    .container#projects .card:focus {
-        transform: scale(1.06);
-    }
-
-    .container#intro {
-        padding: 42px;
-    }
-
-    .container#intro .intro_left {
-        max-width: 90%;
-    }
-
-    /* Disable Bubbles on small screen and centre text */
-    .container#hero {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container#hero>.bubbles {
-        display: none;
-        /* DISABLE BUBBLES */
-    }
-
-    #contactme {
-        min-height: 85vh;
     }
 }
 
@@ -334,4 +342,18 @@ img#avatar {
     100% {
         transform: rotate(10deg) scale(1.7) translateY(10%);
     }
+}
+
+
+@keyframes card-hover-after-text {
+    0% {
+        bottom: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 8%;
+        opacity: 0.8;
+    }
+
 }
